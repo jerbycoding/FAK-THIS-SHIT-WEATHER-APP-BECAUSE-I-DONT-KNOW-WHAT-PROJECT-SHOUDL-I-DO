@@ -23,15 +23,15 @@ async function weather(Country){
     temp.innerText = Math.round(data.main.temp - 273.15) + 'C*';
     country.innerText = data.name
     if(data.weather[0].main == 'Clouds'){
-      weather_pic.src = './images/clouds.png';
+      weather_pic.src = './clouds.png';
     }
     else if(data.weather[0].main == 'Clear'){
-      weather_pic.src = './images/clear.png';
+      weather_pic.src = './clear.png';
     }
     else if(data.weather[0].main == 'Rain'){
-      weather_pic.src = './images/rain.png'
+      weather_pic.src = './rain.png'
     }else if(data.weather[0].main =='Drizzle'){
-      weather_pic.src='./images/rain.dizzle.png'
+      weather_pic.src='./rain.dizzle.png'
     }
     console.log(data.weather[0].main)
   }else {
